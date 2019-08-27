@@ -8,7 +8,6 @@ jobs:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.1-node-browsers
-      composer require doctrine/inflector:1.2.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -32,8 +31,8 @@ jobs:
             - v1-dependencies-{{ checksum "composer.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: php -version
-      - run: composer install -vvv -n --prefer-dist
+
+      - run: composer install -n --prefer-dist
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
