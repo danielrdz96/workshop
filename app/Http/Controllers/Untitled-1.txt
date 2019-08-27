@@ -1,0 +1,8 @@
+-Autores 
+    -Nombre
+    -apellido paterno
+    -apellido materno
+    -libro_id
+    -created_at
+    -update_at
+    -delete_at
